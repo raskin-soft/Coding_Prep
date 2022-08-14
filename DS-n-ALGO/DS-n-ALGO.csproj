@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\LeetCode\LeetCode.csproj" />
+    <ProjectReference Include="..\Random_Test\Random_Test.csproj" />
   </ItemGroup>
 
 </Project>

@@ -5,6 +5,7 @@ using LeetCode;
 //Console.WriteLine("Hello, World!");
 
 LeetCode.Arrays_Hashing.Problems ArrHash = new LeetCode.Arrays_Hashing.Problems();
+Random_Test.Class1 practice = new Random_Test.Class1();
 
 //Console.WriteLine(ArrHash.ContainsDuplicate(new int[] { 1,2,3,5,4}));
 
@@ -22,3 +23,5 @@ LeetCode.Arrays_Hashing.Problems ArrHash = new LeetCode.Arrays_Hashing.Problems(
 //Console.WriteLine(ArrHash.IsValidParenthesis("(([{}]))"));
 
 //Console.WriteLine(ArrHash.CountSpecialNumbers(1352222344));
+
+practice.solve(new int[] { 3,2,5}, 3,4);
