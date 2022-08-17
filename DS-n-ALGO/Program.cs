@@ -24,4 +24,9 @@ Random_Test.Class1 practice = new Random_Test.Class1();
 
 //Console.WriteLine(ArrHash.CountSpecialNumbers(1352222344));
 
-practice.solve(new int[] { 3,2,5}, 3,4);
+//practice.solve(new int[] { 3,2,5}, 3,4);
+
+//Console.WriteLine(ArrHash.MaxProfit(new int[] { 7, 6, 4, 3, 1 }));
+
+Console.WriteLine(ArrHash.BinarySearch(new int[] { -1, 0, 3, 5, 9, 12 }, 19));
+

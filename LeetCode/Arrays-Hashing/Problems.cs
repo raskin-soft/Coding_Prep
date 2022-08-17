@@ -8,6 +8,10 @@ namespace LeetCode.Arrays_Hashing
 {
     public class Problems
     {
+        // Statement: 
+        // Link: 
+        // Tips:
+
         #region EASY
         public bool ContainsDuplicate(int[] nums)
         {
@@ -75,7 +79,7 @@ namespace LeetCode.Arrays_Hashing
 
             //// ------------------------------------------------ Approach - 02 -----------------------------------------------
         }
-        public int[] TwoSum(int[] nums, int target) // ????????????????????
+        public int[] TwoSum(int[] nums, int target)
         {
             // Statement: 1. Two Sum
             // Link: https://leetcode.com/problems/two-sum/
@@ -85,10 +89,10 @@ namespace LeetCode.Arrays_Hashing
 
             for (int i = 0; i < nums.Length; i++)
             {
-                var FindFirstNumberToAdd = target - nums[i];
-                if (NumsDict.ContainsKey(FindFirstNumberToAdd))
+                var FindSecondNumberToAdd = target - nums[i];
+                if (NumsDict.ContainsKey(FindSecondNumberToAdd))
                 {
-                    return new int[] { NumsDict[FindFirstNumberToAdd], i };
+                    return new int[] { NumsDict[FindSecondNumberToAdd], i };
                 }
                 NumsDict[nums[i]] = i;
             }
@@ -125,8 +129,12 @@ namespace LeetCode.Arrays_Hashing
             }
             return true;
         }
-        public bool IsValidParenthesis(string s) // ????????????????????
+        public bool IsValidParenthesis(string s)
         {
+            // Statement: 20. Valid Parentheses
+            // Link: https://leetcode.com/problems/valid-parentheses/
+            // Tips: 
+
             var stack = new Stack<char>();
             var pairs = new Dictionary<char, char>()
             {
@@ -148,6 +156,45 @@ namespace LeetCode.Arrays_Hashing
             }
 
             return stack.Count == 0;
+        }
+        public int MaxProfit(int[] prices)
+        {
+            // Statement: 121. Best Time to Buy and Sell Stock
+            // Link: https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
+            // Tips:
+
+            int maxProfit = 0;
+            int minPrice = prices[0];
+
+            for (int i = 1; i < prices.Length; i++)
+            {
+                int currPrice = prices[i];
+                minPrice = Math.Min(minPrice, currPrice);
+                maxProfit = Math.Max(maxProfit, currPrice - minPrice);
+            }
+            return maxProfit;
+        }
+        public int BinarySearch(int[] nums, int target)
+        {
+            // Statement: 704. Binary Search 
+            // Link: https://leetcode.com/problems/binary-search/
+            // Tips:
+
+            int left = 0, right = nums.Length - 1;
+
+            while(left <= right)
+            {
+                int mid = left + ((right - left) / 2);
+
+                if (nums[mid] == target)
+                    return mid;
+
+                else if (nums[mid] > target)
+                    right = mid - 1;
+                else
+                    left = mid + 1;
+            }
+            return -1;
         }
 
         #endregion
